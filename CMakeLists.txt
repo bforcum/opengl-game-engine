@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 3.12.0)
 project(game-engine VERSION 0.1.0 LANGUAGES C CXX)
 
-set(CMAKE_PREFIX_PATH "${CMAKE_SOURCE_DIR}/dep")
-
 include(FetchContent)
 FetchContent_Declare(
 	glfw

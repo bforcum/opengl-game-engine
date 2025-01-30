@@ -1,4 +1,4 @@
-build
+out/build/
 
 CMake
 CMakeLists.txt.user
