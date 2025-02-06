@@ -14,6 +14,15 @@
             }
         },
         {
+            "name": "vcpkg-windows-base",
+            "hidden": false,
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+            }
+        },
+        {
             "name": "windows-base",
             "hidden": true,
             "generator": "Ninja",
@@ -32,10 +41,9 @@
         {
             "name": "x64-debug",
             "displayName": "x64 Debug",
-            "inherits": "windows-base",
+            "inherits": "vcpkg-windows-base",
             "architecture": {
-                "value": "x64",
-                "strategy": "external"
+                "value": "x64"
             },
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug"
@@ -52,7 +60,7 @@
         {
             "name": "x86-debug",
             "displayName": "x86 Debug",
-            "inherits": "windows-base",
+            "inherits": "vcpkg-windows-base",
             "architecture": {
                 "value": "x86",
                 "strategy": "external"
